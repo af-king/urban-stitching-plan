@@ -16,7 +16,8 @@ for (const entry of await readdir(rootDir, { withFileTypes: true })) {
   }
 
   const shouldCopy =
-    includeNames.has(entry.name) || imagePattern.test(entry.name);
+    includeNames.has(entry.name) ||
+    imagePattern.test(entry.name);
 
   if (!shouldCopy) {
     continue;
